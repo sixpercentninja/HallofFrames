@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootCollectionViewController.h
 //  HallOfFrame
 //
 //  Created by Andrew Chen on 1/20/16.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface RootCollectionViewController : UICollectionViewController
 
+@property NSArray *collectionImages;
 
 @end
-
