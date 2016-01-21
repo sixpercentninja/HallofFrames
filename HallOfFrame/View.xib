@@ -5,7 +5,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView">
+            <connections>
+                <outlet property="blueSlider" destination="JbV-aQ-U7Y" id="LdV-YU-iiP"/>
+                <outlet property="greenSlider" destination="JdB-l4-PJc" id="lDd-o2-fDi"/>
+                <outlet property="redSlider" destination="NWJ-j7-8OW" id="E2l-em-N1w"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="center" id="iN0-l3-epB" customClass="CustomView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -34,6 +40,9 @@
                             </constraints>
                             <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="maximumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="onSliderValueChange:" destination="-1" eventType="valueChanged" id="un3-GQ-7Kv"/>
+                            </connections>
                         </slider>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JbV-aQ-U7Y">
                             <rect key="frame" x="16" y="128" width="218" height="31"/>
@@ -43,6 +52,9 @@
                             </constraints>
                             <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="onSliderValueChange:" destination="-1" eventType="valueChanged" id="CA0-Xl-6KD"/>
+                            </connections>
                         </slider>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JdB-l4-PJc">
                             <rect key="frame" x="16" y="166" width="218" height="31"/>
@@ -52,6 +64,9 @@
                             </constraints>
                             <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="maximumTrackTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="onSliderValueChange:" destination="-1" eventType="valueChanged" id="uTD-qj-4l7"/>
+                            </connections>
                         </slider>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tZ-Jd-iKn">
                             <rect key="frame" x="166" y="15" width="66" height="30"/>
@@ -105,6 +120,9 @@
                             <state key="normal" title="Set Custom Color">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onSetCustomColorButtonTapped:" destination="-1" eventType="touchUpInside" id="Kga-EN-4PW"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>

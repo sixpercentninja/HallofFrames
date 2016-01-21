@@ -8,11 +8,25 @@
 
 #import "CustomView.h"
 
+
+
 @implementation CustomView
 
 - (IBAction)onCustomViewButtonTapped:(UIButton *)sender {
     
     [self.delegate customView:self didTapButton:sender];    
+}
+
+- (IBAction)onSliderValueChange:(UISlider *)sender {
+    
+    // create some float color value properties and then set them here
+    
+}
+
+- (IBAction)onSetCustomColorButtonTapped:(UIButton *)sender {
+    
+    // send custom color method to delegate as in first method above
+    
 }
 
 @end
