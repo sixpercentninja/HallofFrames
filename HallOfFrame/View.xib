@@ -30,7 +30,7 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NWJ-j7-8OW">
+                        <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="NWJ-j7-8OW">
                             <rect key="frame" x="16" y="90" width="218" height="31"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="C5X-AA-XBa"/>
@@ -44,7 +44,7 @@
                                 <action selector="onSliderValueChange:" destination="-1" eventType="valueChanged" id="un3-GQ-7Kv"/>
                             </connections>
                         </slider>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JbV-aQ-U7Y">
+                        <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="JbV-aQ-U7Y">
                             <rect key="frame" x="16" y="128" width="218" height="31"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="214" id="8pY-NA-UwP"/>
@@ -56,7 +56,7 @@
                                 <action selector="onSliderValueChange:" destination="-1" eventType="valueChanged" id="CA0-Xl-6KD"/>
                             </connections>
                         </slider>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JdB-l4-PJc">
+                        <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="JdB-l4-PJc">
                             <rect key="frame" x="16" y="166" width="218" height="31"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="3q4-WH-NW1"/>

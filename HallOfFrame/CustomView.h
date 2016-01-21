@@ -25,8 +25,13 @@
 @interface CustomView : UIView
 
 @property (weak, nonatomic) IBOutlet UISlider *redSlider;
+@property (nonatomic) float redSliderValue;
+
 @property (weak, nonatomic) IBOutlet UISlider *blueSlider;
+@property (nonatomic) float blueSliderValue;
+
 @property (weak, nonatomic) IBOutlet UISlider *greenSlider;
+@property (nonatomic) float greenSliderValue;
 
 @property (nonatomic, assign) id <CustomViewDelegate> delegate;
 
