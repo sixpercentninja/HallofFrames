@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		605AD2DC1C505758003DCB8D /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 605AD2DB1C505758003DCB8D /* View.xib */; };
+		605AD2DF1C50577D003DCB8D /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605AD2DE1C50577D003DCB8D /* CustomView.m */; };
 		97583C2F1C503B5400FCD56D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97583C2E1C503B5400FCD56D /* main.m */; };
 		97583C321C503B5400FCD56D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97583C311C503B5400FCD56D /* AppDelegate.m */; };
 		97583C381C503B5400FCD56D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97583C361C503B5400FCD56D /* Main.storyboard */; };
@@ -17,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		605AD2DB1C505758003DCB8D /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		605AD2DD1C50577D003DCB8D /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		605AD2DE1C50577D003DCB8D /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		97583C2A1C503B5400FCD56D /* HallOfFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HallOfFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97583C2E1C503B5400FCD56D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		97583C301C503B5400FCD56D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,10 +67,13 @@
 			isa = PBXGroup;
 			children = (
 				97583C361C503B5400FCD56D /* Main.storyboard */,
+				605AD2DB1C505758003DCB8D /* View.xib */,
 				97583C4A1C503E3E00FCD56D /* RootCollectionViewController.h */,
 				97583C4B1C503E3E00FCD56D /* RootCollectionViewController.m */,
 				97583C4D1C503ECF00FCD56D /* PhotoCollectionViewCell.h */,
 				97583C4E1C503ECF00FCD56D /* PhotoCollectionViewCell.m */,
+				605AD2DD1C50577D003DCB8D /* CustomView.h */,
+				605AD2DE1C50577D003DCB8D /* CustomView.m */,
 				97583C391C503B5400FCD56D /* Assets.xcassets */,
 				97583C3B1C503B5400FCD56D /* LaunchScreen.storyboard */,
 				97583C3E1C503B5400FCD56D /* Info.plist */,
@@ -141,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				605AD2DC1C505758003DCB8D /* View.xib in Resources */,
 				97583C3D1C503B5400FCD56D /* LaunchScreen.storyboard in Resources */,
 				97583C3A1C503B5400FCD56D /* Assets.xcassets in Resources */,
 				97583C381C503B5400FCD56D /* Main.storyboard in Resources */,
@@ -154,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				605AD2DF1C50577D003DCB8D /* CustomView.m in Sources */,
 				97583C4C1C503E3E00FCD56D /* RootCollectionViewController.m in Sources */,
 				97583C4F1C503ECF00FCD56D /* PhotoCollectionViewCell.m in Sources */,
 				97583C321C503B5400FCD56D /* AppDelegate.m in Sources */,
@@ -304,6 +314,7 @@
 				97583C431C503B5400FCD56D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
