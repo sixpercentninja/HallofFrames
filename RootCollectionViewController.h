@@ -11,5 +11,6 @@
 @interface RootCollectionViewController : UICollectionViewController
 
 @property NSArray *collectionImages;
+@property NSMutableArray *collectionColors;
 
 @end

@@ -26,8 +26,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     self.collectionImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"1"], [UIImage imageNamed:@"2"],[UIImage imageNamed:@"3"],[UIImage imageNamed:@"4"],[UIImage imageNamed:@"5"], nil];
     
-    // Register cell classes
-//    [self.collectionView registerClass:[PhotoCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    self.collectionColors = [NSMutableArray arrayWithObjects:[UIColor blackColor], [UIColor redColor], [UIColor blackColor], [UIColor blackColor], [UIColor blackColor], nil];
     
     [self.collectionView reloadData];
 }
@@ -37,24 +36,29 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PhotoCell" forIndexPath:indexPath];
     UIImageView *collectionImageView = (UIImageView *)[cell viewWithTag:100];
     collectionImageView.image = [self.collectionImages objectAtIndex:indexPath.row];
-    cell.backgroundColor = cell.bgColor;
+    cell.backgroundColor = [self.collectionColors objectAtIndex:indexPath.row];
     return cell;
 }
 
 -(void)customView:(id)view didTapButton:(UIButton *)button {
     
-    PhotoCollectionViewCell *cell = (PhotoCollectionViewCell *)[self.cView cellForItemAtIndexPath:self.lastCellTappedIndexPath];
+    UIColor *newColor = [self.collectionColors objectAtIndex:self.lastCellTappedIndexPath.row];
     
     if ([button.titleLabel.text isEqualToString:@"Red"]) {
-        cell.bgColor = [UIColor redColor];
+        newColor = [UIColor redColor];
+        
     } else if ([button.titleLabel.text isEqualToString:@"Green"]) {
-        cell.bgColor = [UIColor greenColor];
+        newColor = [UIColor greenColor];
+        
     } else {
-        cell.bgColor = [UIColor blueColor];
+        newColor = [UIColor blueColor];
     }
+    
+    [self.collectionColors replaceObjectAtIndex:self.lastCellTappedIndexPath.row withObject:newColor];
     
     [view removeFromSuperview];
     [self.cView reloadData];
@@ -70,21 +74,5 @@ static NSString * const reuseIdentifier = @"Cell";
     self.lastCellTappedIndexPath = indexPath;
 
 }
-
-
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-
-
 
 @end
