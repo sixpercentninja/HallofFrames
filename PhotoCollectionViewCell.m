@@ -10,6 +10,4 @@
 
 @implementation PhotoCollectionViewCell
 
-
-
 @end
